@@ -1,0 +1,54 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- NOTE: EditTextPreference accepts EditText attributes. -->
+    <!-- NOTE: EditTextPreference's summary should be set to its value by the activity code. -->
+    <PreferenceCategory android:title="Mobile network"></PreferenceCategory>
+    <EditTextPreference
+        android:inputType="phone"
+        android:key="pref_mobile_number"
+        android:maxLines="1"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:title="@string/pref_title_mobile_number"
+        android:summary="Enter Mobile Number on which call has to be diverted"/>
+
+    <EditTextPreference
+        android:capitalize="words"
+        android:defaultValue="@string/pref_default_prefix"
+        android:inputType="textCapWords"
+        android:key="pref_prefix"
+        android:maxLines="1"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:title="@string/pref_title_prefix"
+        android:summary="Enter your network forwarding prefix (like **21*)"/>
+    <EditTextPreference
+        android:capitalize="words"
+        android:defaultValue="@string/pref_default_suffix"
+        android:inputType="textCapWords"
+        android:key="pref_suffix"
+        android:maxLines="1"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:title="@string/pref_title_suffix"
+        android:summary="Enter your network forwarding suffix (like #)"/>
+
+    <EditTextPreference
+        android:capitalize="words"
+        android:defaultValue="@string/pref_default_cancel_forward"
+        android:inputType="textCapWords"
+        android:key="pref_cancel_forwarding"
+        android:maxLines="1"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:title="@string/pref_title_cancel_forwarding"
+        android:summary="Enter your network code for cancelling forward (like ##21#)"/>
+
+    <PreferenceCategory android:title="Time" />
+
+    <com.amlabs.smartcallforward.TimePreference
+        android:key="pref_start_time"
+        android:title="Start Time"/>
+
+
+</PreferenceScreen>
